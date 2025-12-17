@@ -6,75 +6,35 @@
     <title>Humech | Right the First Time (最初から正確に)</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root { --main-blue: #004d99; --accent-orange: #ff6600; --bg-light: #f7fafc; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Inter', 'Noto Sans JP', sans-serif; 
-            line-height: 1.6; 
-            color: #1a202c; 
-            background-color: #f7fafc; 
-        }
-        
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; line-height: 1.6; color: #1a202c; background-color: var(--bg-light); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        /* Header Navigation */
         nav { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 800; font-size: 24px; color: #004d99; letter-spacing: 1px; }
-
-        /* Hero Section */
-        .hero { padding: 80px 0; background: linear-gradient(135deg, #ffffff 0%, #edf2f7 100%); }
+        .logo { font-weight: 800; font-size: 24px; color: var(--main-blue); }
+        .hero { padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0; }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        
-        .hero-text h1 { font-size: 3.2rem; line-height: 1.1; color: #004d99; margin-bottom: 5px; }
-        .jp-sub { font-size: 1.4rem; color: #2d3748; margin-bottom: 25px; display: block; font-weight: 700; }
-        
-        .hero-description { font-size: 1.1rem; color: #4a5568; margin-bottom: 30px; border-left: 4px solid #ff6600; padding-left: 15px; }
-
-        /* Image Styling */
-        .hero-image-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e2e8f0;
-        }
-        .hero-image-container img { width: 100%; height: auto; display: block; }
-
-        /* Protocol Grid */
-        .protocol-section { padding: 80px 0; background: white; }
-        .protocol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .card { padding: 30px; border: 1px solid #e2e8f0; border-radius: 8px; }
-        .card h3 { color: #004d99; margin-bottom: 5px; font-size: 1.3rem; }
-        .card .jp-title { display: block; font-size: 0.9rem; color: #718096; margin-bottom: 15px; font-weight: 700; }
-
-        /* CTA Button */
-        .cta-btn {
-            display: inline-block;
-            background-color: #ff6600;
-            color: white;
-            padding: 18px 36px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            transition: 0.3s;
-        }
-        .cta-btn:hover { background-color: #e65c00; transform: translateY(-2px); }
-        .cta-jp { display: block; font-size: 0.75rem; font-weight: 400; opacity: 0.9; }
-
-        @media (max-width: 968px) {
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero-text h1 { font-size: 2.5rem; }
-            .hero-description { border-left: none; padding-left: 0; }
-        }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.1; color: var(--main-blue); }
+        .jp-sub { font-size: 1.5rem; color: #4a5568; margin-bottom: 30px; display: block; font-weight: 700; }
+        .hero-image { width: 100%; border-radius: 12px; box-shadow: 0 20px 25px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        .section-title { text-align: center; margin: 60px 0 40px; color: var(--main-blue); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 80px; }
+        .card { background: white; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .card h3 { font-size: 1.2rem; color: var(--main-blue); }
+        .card .jp-title { display: block; font-size: 0.85rem; color: #718096; margin-bottom: 15px; }
+        .timeline { background: #edf2f7; padding: 60px 0; border-radius: 20px; }
+        .month-box { background: white; margin-bottom: 20px; padding: 25px; border-radius: 10px; border-left: 6px solid var(--accent-orange); }
+        .cta-btn { display: inline-block; background: var(--accent-orange); color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; transition: 0.3s; text-align: center; }
+        .cta-btn:hover { background: #e65c00; transform: translateY(-2px); }
+        .cta-jp { display: block; font-size: 0.7rem; font-weight: 400; opacity: 0.9; }
+        @media (max-width: 968px) { .hero-grid { grid-template-columns: 1fr; text-align: center; } .hero-text h1 { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
-
     <div class="container">
         <nav>
             <div class="logo">HUMECH</div>
-            <a href="#contact" class="cta-btn" style="padding: 10px 20px;">
-                Contact Us <span class="cta-jp">お問い合わせ</span>
-            </a>
+            <a href="#" class="cta-btn" style="padding: 10px 20px;">Protocol Review <span class="cta-jp">プロトコル確認</span></a>
         </nav>
     </div>
 
@@ -84,67 +44,53 @@
                 <div class="hero-text">
                     <h1>Right the First Time</h1>
                     <span class="jp-sub">最初から正確に。</span>
-                    
-                    <div class="hero-description">
-                        <p><strong>English:</strong> Specialized AI-annotation hub for Japanese MedTech in Dhaka.</p>
-                        <p><strong>日本語:</strong> ダッカ（バングラデシュ）を拠点とする、日本の医療現場に特化した高品質AIアノテーションセンター。</p>
-                    </div>
-                    
-                    <a href="#contact" class="cta-btn">
-                        Schedule Protocol Review
-                        <span class="cta-jp">プロトコル確認の予約をする</span>
-                    </a>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Specialized AI-annotation for Japanese Medical Tech in Dhaka.</p>
+                    <a href="#" class="cta-btn">Schedule Protocol Review <span class="cta-jp">プロトコル確認の予約をする</span></a>
                 </div>
-                <div class="hero-image-container">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Medical AI Annotation Visualization">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="MedTech Annotation" class="hero-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="protocol-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; color: #004d99;">
-                Risk Mitigation Strategy <br>
-                <span style="font-size: 1.2rem; color: #4a5568;">リスク緩和戦略</span>
-            </h2>
-            
-            <div class="protocol-grid">
-                <div class="card">
-                    <h3>Quality & Accuracy</h3>
-                    <span class="jp-title">品質と精度のリスク管理</span>
-                    <p>Dynamic Allocation: High-complexity tasks are handled by 3 humans + a Senior Arbiter.</p>
-                    <p style="margin-top:10px; font-size: 0.9rem; color: #4a5568;">動的割り当て：複雑なタスクは3名のアノテーターとシニア仲裁者が担当し、正確性を担保します。</p>
-                </div>
-
-                <div class="card">
-                    <h3>Clinical Talent</h3>
-                    <span class="jp-title">専門人材の確保</span>
-                    <p>We hire Allied Health Professionals (Radiology Techs) instead of transient students.</p>
-                    <p style="margin-top:10px; font-size: 0.9rem; color: #4a5568;">学生ではなく、診療放射線技師などの医療従事者を専門家（SME）として採用しています。</p>
-                </div>
-
-                <div class="card">
-                    <h3>The Bridge SE</h3>
-                    <span class="jp-title">ブリッジエンジニアによる意思疎通</span>
-                    <p>Converting "implicit" Japanese needs into rigid, binary SOPs for the Dhaka team.</p>
-                    <p style="margin-top:10px; font-size: 0.9rem; color: #4a5568;">日本の「阿吽の呼吸」を、ダッカの現場向けに明確でバイナリな標準作業手順書（SOP）に変換します。</p>
-                </div>
-
-                <div class="card">
-                    <h3>Data Security</h3>
-                    <span class="jp-title">データセキュリティとコンプライアンス</span>
-                    <p>Air-Gapped VDI Model ensures high-res streaming without data ever leaving Japan.</p>
-                    <p style="margin-top:10px; font-size: 0.9rem; color: #4a5568;">エアギャップVDIモデルにより、データは日本国内に留めたままリモートアクセスのみで作業を行います。</p>
-                </div>
+    <div class="container">
+        <h2 class="section-title">Risk & Mitigation Protocols <br><span style="font-size: 1.2rem; color: #4a5568;">リスク緩和プロトコル</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Quality & Accuracy</h3>
+                <span class="jp-title">品質と精度：動的割り当て</span>
+                <p>Hard tasks get 3 humans + a Senior Arbiter. Time-on-task is tracked as a proxy for difficulty.</p>
+            </div>
+            <div class="card">
+                <h3>Clinical Talent</h3>
+                <span class="jp-title">人材：医療専門家 (SME)</span>
+                <p>We hire Allied Health Professionals (Radiology Techs) instead of transient students.</p>
+            </div>
+            <div class="card">
+                <h3>The Bridge SE</h3>
+                <span class="jp-title">意思疎通：ブリッジエンジニア</span>
+                <p>Converting vague Japanese requests into rigid, binary SOPs for the Dhaka team.</p>
+            </div>
+            <div class="card">
+                <h3>Data Security</h3>
+                <span class="jp-title">セキュリティ：VDIモデル</span>
+                <p>Zero-Data-Transfer using Latency-Optimized VDI. Data legally stays in Japan.</p>
             </div>
         </div>
-    </section>
 
-    <footer style="text-align: center; padding: 60px; background: #1a202c; color: white;">
-        <p>Humech: Specialized AI-annotation for Japanese Medical Tech</p>
-        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">&copy; 2025 Humech Dhaka. All rights reserved.</p>
+        <div class="timeline">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--main-blue);">3-Month Operational Roadmap <br><span style="font-size: 1rem; font-weight: 400;">3ヶ月間の導入ロードマップ</span></h2>
+            <div class="container" style="max-width: 900px;">
+                <div class="month-box"><strong>Month 1: Fortification</strong><br>Clean Room setup & recruitment of Medical SME Specialists.</div>
+                <div class="month-box"><strong>Month 2: Execution</strong><br>Bridge SEs finalize SOPs and live "Golden Set" production begins.</div>
+                <div class="month-box"><strong>Month 3: Stabilization</strong><br>Performance audits and promotion of high performers to Semantic Segmentation.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 60px; color: #718096; font-size: 0.9rem;">
+        &copy; 2025 Humech AI. Delivering Clinical-Grade Precision from Dhaka.
     </footer>
-
 </body>
 </html>
